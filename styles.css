@@ -1,3 +1,5 @@
+@charset "UTF-8"; /* 文字コードはUTF-8 */
+
 body {
   width: 90%;
   max-width: 900px;
@@ -30,6 +32,7 @@ footer {
   grid-area: footer;
 }
 .container {
+  width: 960px; 
   display: grid;
   grid-template-areas:
     "header header"
@@ -65,4 +68,14 @@ article {
 
 .title {
   color: #02ccba;
+}
+
+.rounded-link img {
+  border-radius: 20px; /* 角の丸み具合 */
+}
+
+.image-margin {
+  /* 上下 10px, 左右 0 の余白 */
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
