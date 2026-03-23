@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Omni Note – 自分で作る百科事典</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!-- 🔥 これを body直下に置くのが重要！ -->
+<input type="checkbox" id="lang-toggle" />
+
+<header class="header">
+    <div class="container">
+        <h1 class="logo">Omni Note</h1>
+	<div class="ja">
+            <nav class="nav a">
+                <a href="index.html">サポートサイト</a>
+                <a href="PrivacyPolicy3.html">プライバシーポリシー</a>
+            </nav>
+	</div>
+	<div class="en">
+            <nav class="nav a">
+                <a href="index.html">Support Site</a>
+                <a href="PrivacyPolicy3_en.html">Privacy Policy</a>
+            </nav>
+	</div>
+        <div class="lang-switch">
+            <label for="lang-toggle">
+                <span class="toggle-label">🇯🇵 / 🇺🇸</span>
+            </label>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container hero-inner">
+
+        <div class="hero-text">
+            <!-- 日本語 -->
+            <div class="ja">
+                <h2>知識を育てる自作事典ノート</h2>
+                <p>情報をまとめる個人Wikiノート</p>
+		<p>
+OmniNote（オムニノート）は、「自分だけの百科事典」を作れるノートアプリです。
+調べた知識、学んだこと、好きなテーマ、コレクション情報、語学の単語、あらゆる情報を項目ごとに整理し、自分だけの事典として育てることが出来ます。
+OmniNote は、あなたの知識を「資産」に変えるアプリです。今から自分だけの百科事典を育て始めましょう。
+		</p>
+                <a class="btn" href="#download">ダウンロード</a>
+            </div>
+
+            <!-- English -->
+            <div class="en">
+                <h2>Grow Your Knowledge with a Personal Encyclopedia</h2>
+                <p>Your Own Private Wiki Notebook</p>
+		<p>
+OmniNote is a notebook app that lets you create your own personal encyclopedia.
+Collect everything you learn—knowledge, research notes, interests, collections—and organize them into structured entries, just like a real encyclopedia.
+		</p>
+                <a class="btn" href="#download">Download</a>
+            </div>
+        </div>
+
+        <div class="hero-img">
+            <img src="IMG_1159.JPG" alt="main image">
+        </div>
+
+    </div>
+</section>
+
+<section id="features" class="features">
+    <div class="container">
+
+        <div class="ja">
+            <h2 class="section-title">特徴</h2>
+
+            <div class="feature-list">
+                <div class="feature-item">
+                    <h3>項目（エントリー）を自由に作成</h3>
+                    <p>百科事典のように「タイトル」→「本文」で構造化されたノートを作成できます。</p>
+                </div>
+                <div class="feature-item">
+                    <h3>カテゴリで体系的に整理</h3>
+                    <p>分野別・テーマ別に分類でき、知識が自然と体系化されます。</p>
+                </div>
+                <div class="feature-item">
+                    <h3>リンクでつながる“個人Wiki”</h3>
+                    <p>項目どうしを相互リンクすれば、あなただけのナレッジベースが完成。</p>
+                </div>
+                <div class="feature-item">
+                    <h3>画像・引用・外部リンクに対応</h3>
+                    <p>参考データや引用を添えて、より深い解説ページを作成できます。</p>
+                </div>
+                <div class="feature-item">
+                    <h3>検索性の高いノート</h3>
+                    <p>百科事典・辞書感覚で必要な情報にすぐアクセス。</p>
+                </div>
+                <div class="feature-item">
+                    <h3>完全オフラインで動作</h3>
+                    <p>高速なローカル検索</p>
+                    <p>アカウントやクラウドストレージは不要</p>
+		    <p>すべてのデータはデバイス上に保存されます</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="en">
+            <h2 class="section-title">Features</h2>
+
+            <div class="feature-list">
+                <div class="feature-item">
+                    <h3>Create Custom Entries</h3>
+                    <p>Build structured notes with a clear “Title → Body” format like an encyclopedia.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Organize with Categories</h3>
+                    <p>Classify entries by field or theme to naturally systematize your knowledge.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Your Own Interconnected Wiki</h3>
+                    <p>Cross-link entries to build a personal knowledge base.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Supports Images, Quotes, Links</h3>
+                    <p>Add references, citations, and links for deeper explanations.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Highly Searchable Notes</h3>
+                    <p>Access information instantly—like your own encyclopedia.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Works completely offline</h3>
+                    <p>Fast local search.</p>
+                    <p>No account or cloud storage required.</p>
+                    <p>All data is stored on your device.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="feature2">
+<div class="ja">
+  <div class="feature-container">
+    <div class="feature-text">
+      <h2>新規項目が登録されると、クイズを出力します</h2>
+      <p>
+        あなたが項目を追加するたびに、自動でクイズを生成します。
+        日々作った辞書データを、楽しく復習できる仕組みです。
+      </p>
+    </div>
+    <div class="phone-wrapper">
+      <img src="iPhone 13 Pro Max _use_1.jpeg" alt="App Screen">
+    </div>
+  </div>
+</div>
+<div class="en">
+  <div class="feature-container">
+    <div class="feature-text">
+      <h2>When a new item is registered, a quiz will be displayed</h2>
+      <p>
+        Every time you add an item, a quiz will be automatically generated.
+	This system makes reviewing the dictionary data you create daily a fun and engaging way to learn.
+      </p>
+    </div>
+    <div class="phone-wrapper">
+      <img src="iPhone 13 Pro Max _use_1.jpeg" alt="App Screen">
+    </div>
+  </div>
+</div>
+<div class="ja">
+  <div class="feature-container">
+    <div class="feature-text">
+      <h2>項目どうしを相互リンクできます</h2>
+      <p>
+        索引の項目を作って一目でわかるようにしたり、
+	参考データや引用を添えて、より深い自分専用の解説ページを作成できます。
+      </p>
+    </div>
+    <div class="phone-wrapper">
+      <img src="iPhone 13 Pro Max _use_2.jpeg" alt="App Screen">
+    </div>
+  </div>
+</div>
+<div class="en">
+  <div class="feature-container">
+    <div class="feature-text">
+      <h2>You can create reciprocal links between items</h2>
+      <p>
+        You can create index entries for easy reference, or add reference data 
+	and citations to create more in-depth, personalized explanation pages.
+      </p>
+    </div>
+    <div class="phone-wrapper">
+      <img src="iPhone 13 Pro Max _use_2.jpeg" alt="App Screen">
+    </div>
+  </div>
+</div>
+<div class="ja">
+  <div class="feature-container">
+    <div class="feature-text">
+      <h2>好みのカラーを背景にできます</h2>
+      <p>
+        RGB（赤・緑・青）を組み合わせて好みのカラーを作ったり、文字のサイズを大きくしたり、
+	小さくしたりして、より自分の好みに設定し編集を楽しみましょう。<br>
+	＊この設定を保存するには、アプリ内課金で保存機能をご購入ください。
+      </p>
+    </div>
+    <div class="phone-wrapper">
+      <img src="iPhone 13 Pro Max _use_3.jpeg" alt="App Screen">
+    </div>
+  </div>
+</div>
+<div class="en">
+  <div class="feature-container">
+    <div class="feature-text">
+      <h2>You can choose your favorite color as the background</h2>
+      <p>
+        Combine RGB (Red, Green, Blue) to create your favorite colors, adjust the font size (enlarge or reduce it), and customize the settings to your liking and enjoy editing.
+<br>
+*To save these settings, please purchase the save function via in-app purchase.
+      </p>
+    </div>
+    <div class="phone-wrapper">
+      <img src="iPhone 13 Pro Max _use_3.jpeg" alt="App Screen">
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="download" class="download">
+    <div class="container">
+
+        <div class="ja">
+            <h2 class="section-title">ダウンロード</h2>
+            <p>無料で今すぐ使える。</p>
+            <a class="btn" href="#">Coming soon.</a>
+        </div>
+
+        <div class="en">
+            <h2 class="section-title">Download</h2>
+            <p>Free to use — start now.</p>
+            <a class="btn" href="#">Coming soon.</a>
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer">
+    <p>©2026 yukineko Apps</p>
+</footer>
+
+</body>
+</html>
