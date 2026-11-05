@@ -52,7 +52,7 @@ body {
 }
 
 .hero-text {
-    max-width: 480px;
+    max-width: 710px;
 }
 
 .hero-text h2 {
@@ -86,7 +86,7 @@ body {
     font-size: 1.8rem;
     margin-bottom: 30px;
 }
-
+/*
 .features {
     padding: 80px 0;
 }
@@ -104,6 +104,79 @@ body {
     padding: 24px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+/*
+
+/* 特徴セクション全体のスタイル */
+.features {
+    padding: 60px 0;
+    background-color: #f9f9f9; /* 薄いグレーの背景でアプリを引き立てる */
+}
+
+/* 1列に並べるための設定 */
+.feature-list {
+    display: flex;
+    flex-direction: column; /* 縦一列に並べる */
+    gap: 30px; /* 各項目のあいだの余白 */
+    max-width: 800px; /* 横に広がりすぎないよう制限（読みやすさ向上） */
+    margin: 0 auto;
+}
+
+/* 各特徴ブロックのスタイル */
+.feature-item {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* 軽い影をつけて立体的に */
+}
+
+/* 「おすすめの人」だけ少し背景色を変えて目立たせる（任意） */
+.feature-item.highlight-item {
+    background: #eef7ff; /* 薄い青色 */
+    border-left: 4px solid #0071e3; /* アクセントカラー */
+}
+
+.feature-item h3 {
+    font-size: 1.3rem;
+    color: #333333;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.feature-item p {
+    font-size: 1rem;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+/* 複数行（箇条書き部分）のスタイル */
+.feature-sublist {
+    list-style: none; /* デフォルトの・を消す */
+    padding-left: 0;
+    margin: 0;
+}
+
+.feature-sublist li {
+    font-size: 0.95rem;
+    color: #444444;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 15px; /* ドット用の余白 */
+}
+
+/* 行頭に綺麗なドットを配置 */
+.feature-sublist li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #0071e3; /* ドットの色（アプリのテーマカラーに合わせて変更してください） */
+    font-weight: bold;
+}
+
+.feature-sublist li:last-child {
+    margin-bottom: 0;
 }
 
 .screens {
@@ -150,6 +223,7 @@ body {
 }
 
 　/* --- Feature Section: 3 Columns --- */
+/*
 .feature-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -164,7 +238,7 @@ body {
     border-radius: 12px;
     border: 1px solid #eee;
 }
-
+*/
 /* タイトル */
 .feature-item h3 {
     margin-bottom: 10px;
@@ -193,7 +267,7 @@ body {
   padding: 60px 20px;
   background: #eef3ff;
 }
-
+/*
 .feature-container {
   max-width: 1100px;
   margin: 0 auto;
@@ -218,6 +292,35 @@ body {
   line-height: 1.6;
   color: #444;
 }
+*/
+
+/* 全体のコンテナ */
+.feature-container {
+  max-width: 600px; /* 必要に応じて調整してください */
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+/* テキスト部分（普通に表示される） */
+.feature-text h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.feature-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ★画像部分だけを横スクロールさせる設定★ */
+.phone-wrapper {
+  width: 100%;               /* コンテナの幅に合わせる */
+  overflow-x: auto;          /* 横方向にはみ出したらスクロール */
+  white-space: nowrap;       /* 中身の改行を防ぐ */
+  -webkit-overflow-scrolling: touch; /* スマホでのスクロールを滑らかに */
+  margin-top: 20px;
+}
 
 .feature-image {
   flex: 1 1 300px;
@@ -234,7 +337,7 @@ body {
   display: block;
   margin: 0 auto;
 }
-
+/*
 .phone-wrapper {
   background-color: #eef3ff;   /* ← お好きな色に変更 */
   padding: 40px;
@@ -248,4 +351,92 @@ body {
   height: auto;
   display: block;
   margin: 0 auto;
+}
+*/
+/* 中の画像 */
+/* ★画像を包むコンテナの設定★ */
+.phone-wrapper {
+  display: flex;             /* 子要素（画像）を横一列に並べる */
+  overflow-x: auto;          /* 横方向にはみ出したらスクロールバーを出す */
+  gap: 16px;                 /* 画像と画像の間のすき間（お好みで調整） */
+  padding-bottom: 10px;      /* スクロールバーと画像の間の余白 */
+  margin-top: 20px;
+  -webkit-overflow-scrolling: touch; /* スマホで滑らかにスクロールさせる */
+}
+
+/* ★中にある画像（iPhoneモックアップ等）の設定★ */
+.phone-wrapper img {
+  flex-shrink: 0;            /* 画面幅に合わせて画像が縮むのを防ぐ（超重要） */
+  width: 280px;              /* 画像1枚あたりの横幅（画面に合わせて調整してください） */
+  max-width: none;           /* 他のCSSによる max-width: 100% などの干渉をリセット */
+  height: auto;              /* 横幅に合わせてアスペクト比を維持 */
+  border-radius: 12px;       /* （任意）画像の角を少し丸くするときれいに見えます */
+}
+
+/* ===== Disclaimer & Notes ===== */
+/* 全体を囲う枠：これでタイトルと箱がセットで真ん中に配置されます */
+.disclaimer-container {
+    width: 650px;
+    margin: 40px auto; /* 上下に少し余白をあけ、左右は真ん中寄せ */
+    text-align: center; /* タイトルを真ん中に寄せる */
+}
+
+/* タイトルのデザイン修正 */
+.section-title {
+    font-size: 1.1rem;      /* 文字サイズを少し小さくして上品に */
+    color: #4a5568;         /* 真っ黒ではなく、少し青みのある濃いグレーで馴染ませる */
+    margin-bottom: 16px;    /* タイトルと下の箱との隙間 */
+    letter-spacing: 0.05em; /* 文字の間隔を少し広げて見やすく */
+}
+
+.disclaimer_notes-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+}
+
+/* 箱のデザイン修正 */
+.disclaimer_notes-item {
+    width: 100%; /* 親要素（650px）に合わせる */
+    background: #eef2f7; /* ★ベージュから清潔感のある薄いブルー（水色）に変更 */
+    padding: 24px 24px 24px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03); /* 影も少し優しく */
+    text-align: left; /* 中身の文章は左詰めに */
+}
+
+/* リスト項目の調整 */
+.disclaimer_notes-item li {
+    list-style-type: disc;
+    color: #4a5568;       /* 文章の色もタイトルと統一して馴染ませる */
+    margin-bottom: 12px;   
+    line-height: 1.6;      
+}
+
+.disclaimer_notes-item li:last-child {
+    margin-bottom: 0;      
+}
+
+/* SF Symbols風の「COMING SOON」バッジスタイル */
+.sf-soon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 11px;          /* 小さくシャープに */
+  font-weight: 700;         /* 力強い太字 */
+  text-transform: uppercase; /* 強制大文字 */
+  letter-spacing: 0.15em;    /* SF Symbols特有の美しい文字間隔 */
+  color: #ffffff;           /* 文字色（白） */
+  background-color: #007aff;/* Apple標準のブルー */
+  padding: 3px 8px 3px 9px; /* 上下左右の微調整（文字間隔の余白を考慮） */
+  border-radius: 4px;       /* 緩やかな角丸 */
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  line-height: 1;
+  vertical-align: middle;   /* 前後のテキストと高さを揃える */
+  margin: 0 4px;            /* 前後の隙間 */
 }
