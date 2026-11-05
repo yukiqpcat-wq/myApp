@@ -400,6 +400,7 @@ body {
 }
 
 /* 箱のデザイン修正 */
+/*
 .disclaimer_notes-item {
     width: 100%; /* 親要素（650px）に合わせる */
     background: #eef2f7; /* ★ベージュから清潔感のある薄いブルー（水色）に変更 */
@@ -408,17 +409,64 @@ body {
     box-shadow: 0 4px 12px rgba(0,0,0,0.03); /* 影も少し優しく */
     text-align: left; /* 中身の文章は左詰めに */
 }
-
+*/
 /* リスト項目の調整 */
+/*
 .disclaimer_notes-item li {
     list-style-type: disc;
     color: #4a5568;       /* 文章の色もタイトルと統一して馴染ませる */
     margin-bottom: 12px;   
     line-height: 1.6;      
 }
-
+*/
+/*
 .disclaimer_notes-item li:last-child {
     margin-bottom: 0;      
+}
+*/
+
+/* リストを包む箱（ul）のデザイン修正 */
+.disclaimer_notes-list {
+    width: 100%; 
+    box-sizing: border-box;  /* ★パディングを横幅に含めることで、はみ出しを完全に防ぎます */
+    background: #eef2f7; 
+    padding: 24px 20px 24px 35px; /* ★スマホでも窮屈にならないよう、左右の余白を少し調整 */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03); 
+
+    /* 👇左右上下の余白を明示的に指定（padding-leftをしっかり取る） */
+    padding: 24px 20px 24px 35px; 
+
+    /* 👇親要素からの中央揃えをここで完全に断ち切る */
+    text-align: left; 
+}
+
+/* リスト項目の調整 */
+.disclaimer_notes-list li {
+    /* 👇ここを追加：箱の横幅を文字数に関わらず「常に100%」にします */
+    display: block !important;
+    width: 100% !important;
+    
+    /* リストのポッチ（•）を内側に正しく表示させる設定 */
+    list-style-position: inside; 
+    list-style-type: disc;
+    
+    color: #4a5568;       
+    margin-bottom: 12px;   
+    line-height: 1.6;      
+    word-break: break-all;
+    text-align: left; /* これで常に左に寄ります */
+}
+
+.disclaimer_notes-list li:last-child {
+    margin-bottom: 0;      
+}
+
+/* 【追加】PCとスマホの改行コントロール */
+@media (max-width: 768px) {
+    .pc-only {
+        display: none; /* スマホの時は <br class="pc-only"> を無効化して自然に折り返します */
+    }
 }
 
 /* SF Symbols風の「COMING SOON」バッジスタイル */
